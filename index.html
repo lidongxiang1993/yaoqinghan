@@ -1209,6 +1209,13 @@
       }
       let isAudio = false
       // 将以下代码添加到js入口函数内即可
+      document.addEventListener("WeixinJSBridgeReady", function () {
+        if (!isAudio) {
+          setTimeout(() => {
+            audioPlay()
+          }, 300)
+        }
+      })
       document.addEventListener("touchstart", function () {
         if (!isAudio) {
           setTimeout(() => {
