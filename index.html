@@ -1210,6 +1210,8 @@
       let isAudio = false
       // 将以下代码添加到js入口函数内即可
       document.addEventListener("WeixinJSBridgeReady", function () {
+        // 音频图标旋转
+        audioRotate()
         if (!isAudio) {
           setTimeout(() => {
             audioPlay()
